@@ -3,26 +3,25 @@ import { useEffect } from 'react'
 import './App.css'
 
 function App() {
-  {
 
-    let [fnmap, setFnmap] = useState({})
+  let [fnshop, setFnshop] = useState(null)
 
-    async function getData() {
-      try {
-        let promise = await fetch('https://fortnite-api.com/v1/map')
-        let data = await promise.json()
-        setFnmap(data)
-        console.log(fnmap)
-      } catch {
-        console.log(error)
-      }
-
+  async function getData() {
+    try {
+      let promise = await fetch('https://fortnite-api.com/v2/shop/br')
+      let data = await promise.json()
+      setFnshop(data)
+    } catch {
+      console.log(error)
     }
-    useEffect(() => {
-      getData()
-    }, [])
 
   }
+
+  useEffect(() => {
+    getData()
+  }, [])
+
+  console.log(fnshop)
 
 
 
@@ -30,9 +29,13 @@ function App() {
 
   return (
     <>
+      { fnshop ?
       <div>
-        {/* {fnmap.data.images.pois} */}
+        {fnshop.data.featured.entries[0].bundle.image}
       </div>
+    :
+    null
+}
     </>
   )
 }
