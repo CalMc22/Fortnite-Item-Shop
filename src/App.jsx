@@ -5,7 +5,7 @@ function App() {
   return (
     <>
       <div>
-Fortnite Map
+Fortnite Map is on Netlify!
       </div>
     </>
   )
