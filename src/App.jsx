@@ -29,13 +29,24 @@ function App() {
 
   return (
     <>
-      { fnshop ?
-      <div>
-        {fnshop.data.featured.entries[0].bundle.image}
-      </div>
-    :
-    null
-}
+      {fnshop ?
+        <div>
+          <h1>
+            <img src={fnshop.data.vbuckIcon} height={25} />
+            Fortnite Item Shop as of {fnshop.data.date}
+            <img src={fnshop.data.vbuckIcon} height={25} />
+          </h1>
+
+          <div>
+            <img src={fnshop.data.featured.entries[0].items[0].images.icon} height={200} />
+            <img src={fnshop.data.featured.entries[1].items[0].images.icon} height={200} />
+            <img src={fnshop.data.featured.entries[2].items[0].images.icon} height={200} />
+          </div>
+        </div>
+        :
+        null
+
+      }
     </>
   )
 }
