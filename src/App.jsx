@@ -2,21 +2,27 @@ import { useState } from 'react'
 import { useEffect } from 'react'
 import './App.css'
 
-function App(){ {
-  
-  let [value, setValue] = useState({})
+function App() {
+  {
 
-  async function getData() {
-  let promise = await fetch ('https://fortnite-api.com/v1/map')
-  let data = await promise.json()
-  setValue(data)
-  console.log(value)
-}
-useEffect (() => {
-  getData()
-  } , [])
+    let [fnmap, setFnmap] = useState({})
 
-}
+    async function getData() {
+      try {
+        let promise = await fetch('https://fortnite-api.com/v1/map')
+        let data = await promise.json()
+        setFnmap(data)
+        console.log(fnmap)
+      } catch {
+        console.log(error)
+      }
+
+    }
+    useEffect(() => {
+      getData()
+    }, [])
+
+  }
 
 
 
@@ -24,11 +30,11 @@ useEffect (() => {
 
   return (
     <>
-          <div>
-            hi
-          </div>
+      <div>
+        {/* {fnmap.data.images.pois} */}
+      </div>
     </>
   )
-  }
+}
 
 export default App
