@@ -41,7 +41,7 @@ function App() {
           <h2 className='shopTab'>FEATURED</h2>
           <div className='shop'>
             {shopFeaturedItemArray.map((entries, index) => (
-              <img className='shopEntry' key={index} src={entries.items[0].images.featured} />
+              <img className='shopEntry' key={index} src={entries.items[0].images.featured || entries.items[0].images.icon} />
               ))}
           </div>
           {/* <h3 className='shopTab'>BUNDLES</h3> */}
