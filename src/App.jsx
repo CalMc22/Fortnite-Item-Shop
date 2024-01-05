@@ -23,9 +23,9 @@ function App() {
 
   console.log(fnshop)
 
-  let shopItemArray = fnshop ? fnshop.data.featured.entries : null
+  let shopFeaturedItemArray = fnshop ? fnshop.data.featured.entries : null
 
-  console.log(shopItemArray)
+  console.log(shopFeaturedItemArray)
 
 
 
@@ -38,12 +38,18 @@ function App() {
             Fortnite Item Shop as of {fnshop.data.date}
             <img src={fnshop.data.vbuckIcon} height={25} />
           </h1>
-
+          <h2 className='shopTab'>FEATURED</h2>
           <div className='shop'>
-            {shopItemArray.map((entries, index) => (
+            {shopFeaturedItemArray.map((entries, index) => (
               <img className='shopEntry' key={index} src={entries.items[0].images.featured} />
-            ))}
+              ))}
           </div>
+          {/* <h3 className='shopTab'>BUNDLES</h3> */}
+              {/* <div className='shop'>
+                {shopFeaturedItemArray.map((entries, index) => (
+                  <img className='shopEntry' key={index} src={entries.bundle.image} />
+                ))}
+              </div> */}
         </div>
         :
         null

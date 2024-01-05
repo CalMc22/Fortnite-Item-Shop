@@ -8,7 +8,15 @@
       background-color: black;
       color: white;
       display: flex;
-      justify-content: center
+      justify-content: center;
+      margin-top: 0px;
+    }
+
+    .shopTab{
+        background-color: black;
+        color: white;
+        display: flex;
+        justify-content: center;
     }
   
   .shopEntry {
