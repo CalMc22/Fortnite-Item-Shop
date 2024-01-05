@@ -9,7 +9,7 @@ function App() {
   useEffect(() => {
     async function getData() {
       try {
-        let promise = await fetch('https://fortnite-api.com/v2/shop/br')
+        let promise = await fetch('https://fortnite-api.com/v2/shop/br/combined')
         let data = await promise.json()
         setFnshop(data)
       } catch {
@@ -25,9 +25,15 @@ function App() {
 
   let shopFeaturedItemArray = fnshop ? fnshop.data.featured.entries : null
 
+  if (fnshop){
+  console.log('Featured below')
   console.log(shopFeaturedItemArray)
 
-
+  console.log('Bundles below')
+  console.log(shopFeaturedItemArray[0].bundle.image)
+} else {
+  console.log('If statement failed')
+}
 
   return (
     <div className='container'>
@@ -41,13 +47,16 @@ function App() {
           <h2 className='shopTab'>FEATURED</h2>
           <div className='shop'>
             {shopFeaturedItemArray.map((entries, index) => (
-              <img className='shopEntry' key={index} src={entries.items[0].images.featured || entries.items[0].images.icon} />
+              <div className='shopEntry'>
+              <img className='shopEntryIcon' key={index} src={entries.items[0].images.icon} srcSet='' />
+              <img className='shopEntryBackground' key={index} src={entries.items[0].images.icon} />
+              </div>
               ))}
           </div>
-          {/* <h3 className='shopTab'>BUNDLES</h3> */}
-              {/* <div className='shop'>
+          {/* <h3 className='shopTab'>BUNDLES</h3>
+              <div className='shop'>
                 {shopFeaturedItemArray.map((entries, index) => (
-                  <img className='shopEntry' key={index} src={entries.bundle.image} />
+                  <img className='shopEntry' key={index} src={entries.bundle} />
                 ))}
               </div> */}
         </div>

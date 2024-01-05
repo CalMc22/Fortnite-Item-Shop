@@ -28,14 +28,14 @@ body {
     place-items: center;
     min-width: 320px;
     min-height: 100vh;
-    background: rgb(6, 0, 112);
-    background: linear-gradient(90deg, rgba(6, 0, 112, 1) 0%, rgba(0, 0, 129, 1) 25%, rgba(0, 74, 218, 1) 50%, rgba(0, 148, 255, 1) 75%, rgba(126, 233, 255, 1) 100%);
+    background: rgb(0,148,255);
+    background: radial-gradient(circle, rgba(0,148,255,1) 0%, rgba(0,167,255,1) 25%, rgba(0,212,255,1) 50%, rgba(0,167,255,1) 75%, rgba(0,148,255,1) 100%);
 }
 
 
 .container {
-    border: 10px solid blue;
-    background-color: cornflowerblue;
+    border: 10px solid black;
+
 }
 
 .title {
