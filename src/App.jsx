@@ -44,7 +44,7 @@ function App() {
             Fortnite Item Shop as of {fnshop.data.date}
             <img src={fnshop.data.vbuckIcon} height={40} />
           </h1>
-          <h2 className='shopTab'>FEATURED BR COSMETICS</h2>
+          <h2 className='shopTab'>FEATURED COSMETICS</h2>
           <div className='shop'>
             {shopFeaturedItemArray.map((entries, index) => (
               <img className='shopEntry' key={index} src={entries.items[0].images.icon} />
