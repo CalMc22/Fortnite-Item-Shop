@@ -73,7 +73,7 @@ function App() {
               <img className='shopEntry' key={index} src={entries.items[0].images.icon} />
             ))}
           </div>
-          <h3 className='shopTab'>LEGO</h3>
+          <h3 className='shopTab'>LEGO STYLES</h3>
           <div className='shop'>
             {/* maps over the shopFeaturedItemArray variable, checks in lego exists, if so, renders each shop entry small lego icon */}
             {shopFeaturedItemArray.map((entries, index) => (
