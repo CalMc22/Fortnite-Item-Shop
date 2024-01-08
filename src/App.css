@@ -1,5 +1,7 @@
 body {
     margin: 0;
+    background: rgb(0,148,255);
+    background: linear-gradient(180deg, rgba(0,148,255,1) 0%, rgba(116,232,255,1) 75%);
 }
 
 .loading {
@@ -22,8 +24,6 @@ body {
     min-width: 320px;
     min-height: 100vh;
     color: white;
-    background: rgb(0,148,255);
-    background: linear-gradient(180deg, rgba(0,148,255,1) 0%, rgba(116,232,255,1) 75%);
 }
 
 .title {

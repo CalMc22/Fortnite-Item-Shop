@@ -56,39 +56,42 @@ function App() {
 
 
   return (
-    <div className='container'>
-      {/* check if fnshop exists, if so, render the following */}
-      {fnshop ?
-        <div>
-          <h1 className='title'>
-            <img className='vbuckIcon' src={fnshop.data.vbuckIcon} />
-            {/* targets the current shop date */}
-            Fortnite Item Shop as of {fnshop.data.date}
-            <img className='vbuckIcon' src={fnshop.data.vbuckIcon} />
-          </h1>
-          <h2 className='shopTab'>FEATURED COSMETICS</h2>
-          <div className='shop'>
-            {/* maps over the shopFeaturedItemArray variable and renders each shop entry icon */}
-            {shopFeaturedItemArray.map((entries, index) => (
-              <img className='shopEntry' key={index} src={entries.items[0].images.icon} />
-            ))}
-          </div>
-          <h3 className='shopTab'>LEGO STYLES</h3>
-          <div className='shop'>
-            {/* maps over the shopFeaturedItemArray variable, checks in lego exists, if so, renders each shop entry small lego icon */}
-            {shopFeaturedItemArray.map((entries, index) => (
-              <img className='shopEntry' key={index + 1000}
-                src={entries.items[0].images.lego
-                  ? entries.items[0].images.lego.small
-                  : entries.items[0].images.lego} />
-            ))}
+    <>
+      <div className='container'>
+        {/* check if fnshop exists, if so, render the following */}
+        {fnshop ?
+          <div>
+            <h1 className='title'>
+              <img className='vbuckIcon' src={fnshop.data.vbuckIcon} />
+              {/* targets the current shop date */}
+              Fortnite Item Shop as of {fnshop.data.date}
+              <img className='vbuckIcon' src={fnshop.data.vbuckIcon} />
+            </h1>
+            <h2 className='shopTab'>FEATURED COSMETICS</h2>
+            <div className='shop'>
+              {/* maps over the shopFeaturedItemArray variable and renders each shop entry icon */}
+              {shopFeaturedItemArray.map((entries, index) => (
+                <img className='shopEntry' key={index} src={entries.items[0].images.icon} />
+              ))}
+            </div>
+            <h3 className='shopTab'>LEGO STYLES</h3>
+            <div className='shop'>
+              {/* maps over the shopFeaturedItemArray variable, checks in lego exists, if so, renders each shop entry small lego icon */}
+              {shopFeaturedItemArray.map((entries, index) => (
+                <img className='shopEntry' key={index + 1000}
+                  src={entries.items[0].images.lego
+                    ? entries.items[0].images.lego.small
+                    : entries.items[0].images.lego} />
+              ))}
 
+            </div>
           </div>
-        </div>
-        // if fnshop DOES NOT exist, render loading div
-        : <div className='loading'>Loading...</div>
-      }
-    </div>
+          // if fnshop DOES NOT exist, render loading div
+          : <div className='loading'>Loading...</div>
+        }
+      </div>
+      <footer>Not associated with Epic Games</footer>
+    </>
   )
 }
 
