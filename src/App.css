@@ -52,7 +52,7 @@ body {
 
 .shopEntry {
     height: 200px;
-    border: 5px solid black;
+    /* border: 5px solid black; */
     background: rgb(0,73,73);
     background: linear-gradient(180deg, rgba(0,73,73,1) 0%, rgba(150,150,150,1) 95%);
     margin-left: 10px;
