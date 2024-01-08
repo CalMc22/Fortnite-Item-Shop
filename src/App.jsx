@@ -15,13 +15,11 @@ function App() {
       } catch {
         console.log(error)
       }
-
     }
-
     getData()
   }, [])
 
-  console.log(fnshop)
+  // console.log(fnshop)
 
   // checks if fnshop exists, if so, set variable to entries array. If not, return null
   let shopFeaturedItemArray = fnshop ? fnshop.data.featured.entries : null
@@ -90,7 +88,7 @@ function App() {
           : <div className='loading'>Loading...</div>
         }
       </div>
-      <footer>Not associated with Epic Games</footer>
+      <footer>Disclaimer: This site is not associated with Epic Games</footer>
     </>
   )
 }

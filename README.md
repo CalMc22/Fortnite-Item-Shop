@@ -1,10 +1,28 @@
-# React + Vite
+# Fortnite Item Shop!
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An application that shows all the current cosmetics in the Fortnite Item Shop!
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-# Fortnite-Interactive-Map
-# Fortnite-Interactive-Map
+## Where's the link tho?
+
+You can use the link below to view the Fortnite Item Shop!
+
+https://polite-snickerdoodle-049de6.netlify.app/
+
+## Assets
+
+* All data is pulled from this Fortnite API: https://dash.fortnite-api.com/endpoints/shop
+
+## Future Ideas
+
+* Add more shop tabs showing Bundles, Music, and Rocket Racing Vehicles
+* Show description and price of item when clicked
+
+## Known Bugs
+
+* Doesn't visually look well on mobile
+* Gaps between some Lego Cosmetics
+
+## Liscense
+
+*Caleb McConnell*
