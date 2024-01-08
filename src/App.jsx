@@ -40,9 +40,9 @@ function App() {
       {fnshop ?
         <div>
           <h1 className='title'>
-            <img src={fnshop.data.vbuckIcon} height={25} />
+            <img src={fnshop.data.vbuckIcon} height={40} />
             Fortnite Item Shop as of {fnshop.data.date}
-            <img src={fnshop.data.vbuckIcon} height={25} />
+            <img src={fnshop.data.vbuckIcon} height={40} />
           </h1>
           <h2 className='shopTab'>FEATURED BR COSMETICS</h2>
           <div className='shop'>
