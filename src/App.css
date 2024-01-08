@@ -41,7 +41,7 @@ body {
 }
 
 .shopTab {
-    font-size: 30;
+    font-size: 30px;
     background-color: black;
     display: flex;
     justify-content: center;
