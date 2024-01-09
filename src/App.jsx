@@ -40,17 +40,6 @@ function App() {
     }
     */
 
-  // function getBundle() {
-  //   shopFeaturedItemArray.map(function(entries, index) {
-  //     if (entries.banner = null) {
-  //       console.log('getBundle null')
-  //       return <div>No Bundle</div>
-  //     } else {
-  //       console.log('getBundle image')
-  //       return <img className='shopEntry' key={index + 1000} src={entries.items[0].images.featured} />
-  //     }
-  //   })
-  //   }
 
 
   return (
@@ -88,7 +77,6 @@ function App() {
           : <div className='loading'>Loading...</div>
         }
       </div>
-      <footer>Disclaimer: This site is not associated with Epic Games</footer>
     </>
   )
 }

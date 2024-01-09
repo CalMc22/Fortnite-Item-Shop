@@ -22,7 +22,3 @@ https://polite-snickerdoodle-049de6.netlify.app/
 
 * Doesn't visually look well on mobile
 * Gaps between some Lego Cosmetics
-
-## Liscense
-
-*Caleb McConnell*
