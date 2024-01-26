@@ -19,14 +19,16 @@ function App() {
     getData()
   }, [])
 
-  // console.log(fnshop)
-
+  
   // checks if fnshop exists, if so, set variable to entries array. If not, return null
   let shopFeaturedItemArray = fnshop ? fnshop.data.featured.entries : null
-
+  
   /*
-    // console logs for testing targeting the api
-    if (fnshop) {
+  // console logs for testing targeting the api
+
+  // console.log(fnshop)
+
+  if (fnshop) {
       console.log('Featured below')
       console.log(shopFeaturedItemArray)
   
