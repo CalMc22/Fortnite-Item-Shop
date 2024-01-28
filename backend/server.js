@@ -1,20 +1,28 @@
+const express = require('express')
+const cors = require('cors')
+
 require('dotenv').config()
+
 const mongoConfig = require('./config')
-const express = require('express');
-const mongoose = require('mongoose');
-const bodyParser = require('body-parser');
-const methodOverride = require('method-override');
 
-const app = express();
-const PORT = process.env.PORT || 3000;
+mongoConfig()
 
-app.set('view engine', 'jsx');
-app.engine('jsx', require('express-react-views').createEngine());
+const authRoutes = require('./routes/authRoutes')
+const userRoutes = require('./routes/userRoutes')
 
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(methodOverride('_method'));
+const { authorize } = require('./middleware/authMiddleware')
+
+const app = express()
+
+const PORT = 8080
+
+app.use(cors())
+app.use(express.json())
+
+app.use('/auth', authRoutes)
+app.use('/api/users', authorize, userRoutes)
 
 app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
-  mongoConfig()
-});
+    console.log('Listening on port: ' + PORT)
+})
+

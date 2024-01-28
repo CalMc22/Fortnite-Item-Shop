@@ -1,86 +1,73 @@
-import { useState } from 'react'
-import { useEffect } from 'react'
+import axios from 'axios'
+
+import { useState, useEffect } from "react";
+import { Navigate, Route, Routes } from "react-router-dom";
+
+import Navbar from "./components/Navbar";
+
+import Home from "./pages/Home";
+import Login from "./pages/Login";
+import Profile from "./pages/Profile";
+import Register from "./pages/Register";
+
 import './App.css'
+
 
 function App() {
 
-  let [fnshop, setFnshop] = useState(null)
+    const [user, setUser] = useState({})
+    const [isLoading, setIsLoading] = useState(true)
 
-  useEffect(() => {
-    async function getData() {
-      try {
-        let promise = await fetch('https://fortnite-api.com/v2/shop/br/combined')
-        let data = await promise.json()
-        setFnshop(data)
-      } catch {
-        console.log(error)
-      }
-    }
-    getData()
-  }, [])
-
-  
-  // checks if fnshop exists, if so, set variable to entries array. If not, return null
-  let shopFeaturedItemArray = fnshop ? fnshop.data.featured.entries : null
-  
-  /*
-  // console logs for testing targeting the api
-
-  // console.log(fnshop)
-
-  if (fnshop) {
-      console.log('Featured below')
-      console.log(shopFeaturedItemArray)
-  
-      console.log('Bundles below')
-      shopFeaturedItemArray.map((entries, index) => (
-        console.log(entries.bundle)
-      ))
-      // console.log(shopFeaturedItemArray[0].bundle.image)
-    } else {
-      console.log('If statement failed')
-    }
-    */
-
-
-
-  return (
-    <>
-      <div className='container'>
-        {/* check if fnshop exists, if so, render the following */}
-        {fnshop ?
-          <div>
-            <h1 className='title'>
-              <img className='vbuckIcon' src={fnshop.data.vbuckIcon} />
-              {/* targets the current shop date */}
-              Fortnite Item Shop as of {fnshop.data.date}
-              <img className='vbuckIcon' src={fnshop.data.vbuckIcon} />
-            </h1>
-            <h2 className='shopTab'>FEATURED COSMETICS</h2>
-            <div className='shop'>
-              {/* maps over the shopFeaturedItemArray variable and renders each shop entry icon */}
-              {shopFeaturedItemArray.map((entries, index) => (
-                <img className='shopEntry' key={index} src={entries.items[0].images.icon} />
-              ))}
-            </div>
-            <h3 className='shopTab'>LEGO STYLES</h3>
-            <div className='shop'>
-              {/* maps over the shopFeaturedItemArray variable, checks in lego exists, if so, renders each shop entry small lego icon */}
-              {shopFeaturedItemArray.map((entries, index) => (
-                <img className='shopEntry' key={index + 1000}
-                  src={entries.items[0].images.lego
-                    ? entries.items[0].images.lego.small
-                    : entries.items[0].images.lego} />
-              ))}
-
-            </div>
-          </div>
-          // if fnshop DOES NOT exist, render loading div
-          : <div className='loading'>Loading...</div>
+    async function getUser(token) {
+        try {
+            const response = await axios.get('/api/users', {
+                headers: {
+                    Authorization: token
+                }
+            })
+            setUser(response.data)
+        } catch(err) {
+            console.log(err)
+            localStorage.removeItem("token")
         }
-      </div>
-    </>
-  )
+        setIsLoading(false)
+    }
+
+    useEffect(() => {
+
+        const token = localStorage.getItem("token")
+
+        if (token) {
+            // get user info
+            getUser(token)
+        } else {
+            setIsLoading(false)
+        }
+
+    }, [])
+
+    let loggedIn = user.username
+
+    return ( 
+        <div className="app">          
+            <Navbar username={user.username} setUser={setUser} />
+            <Routes>
+                <Route path="/" element={<Home />} />
+                {loggedIn ? 
+                    <>
+                        <Route path="/profile" element={<Profile username={user.username} email={user.email} />} />
+                        {!isLoading && <Route path="*" element={<Navigate to="/" />} />}
+                    </>
+                    :
+                    <>
+                        <Route path="/login" element={<Login setUser={setUser} />} />
+                        <Route path="/register" element={<Register setUser={setUser} />} />
+                        {!isLoading && <Route path="*" element={<Navigate to="/login" />} />}
+                    </>
+                }
+            </Routes>
+        </div>
+     );
 }
 
-export default App
+export default App;
