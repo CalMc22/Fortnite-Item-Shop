@@ -38,7 +38,6 @@ function App() {
         const token = localStorage.getItem("token")
 
         if (token) {
-            // get user info
             getUser(token)
         } else {
             setIsLoading(false)
