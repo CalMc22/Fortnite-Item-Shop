@@ -25,7 +25,7 @@ function Login({ setUser }) {
             const response = await axios.post('/auth/login', form)
             const token = response.data.token
 
-            console.log(token)
+            // console.log(token)
 
             if (!token) {
                 setForm(emptyForm)
