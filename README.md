@@ -24,3 +24,7 @@ You can use the link below to view the Fortnite Item Shop!
 ## Known Bugs
 
 * Gaps between some Lego Cosmetics
+
+## Production
+
+* https://trello.com/b/KL6AiwBu/mode-3-project
