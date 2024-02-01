@@ -7,7 +7,8 @@ An application that shows all the current cosmetics in the Fortnite Item Shop!
 
 You can use the link below to view the Fortnite Item Shop!
 
-https://polite-snickerdoodle-049de6.netlify.app/
+Frontend: https://fortnite-item-shop.onrender.com/
+Backend: https://fn-item-shop.onrender.com/
 
 ## Assets
 
@@ -20,5 +21,4 @@ https://polite-snickerdoodle-049de6.netlify.app/
 
 ## Known Bugs
 
-* Doesn't visually look well on mobile
 * Gaps between some Lego Cosmetics
