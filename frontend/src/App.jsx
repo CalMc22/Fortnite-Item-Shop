@@ -12,7 +12,7 @@ import Register from "./pages/Register";
 import Shop from './pages/Shop';
 
 import './App.css'
-import baseURL from '../Api'; 
+import baseURL from './Api'; 
 
 
 
@@ -23,7 +23,7 @@ function App() {
 
     async function getUser(token) {
         try {
-            const response = await axios.get('/api/users', {
+            const response = await axios.get(baseURL+'/api/users', {
                 headers: {
                     Authorization: token
                 }
