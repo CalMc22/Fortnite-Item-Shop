@@ -14,7 +14,7 @@ function Navbar({ username, setUser }) {
         {username ?
           <>
             <li>
-              <Link to="/shop">
+              <Link to='/shop' >
                 <img className="icon" src={icon} />
               </Link>
             </li>

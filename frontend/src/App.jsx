@@ -12,6 +12,7 @@ import Register from "./pages/Register";
 import Shop from './pages/Shop';
 
 import './App.css'
+import baseURL from '../Api'; 
 
 
 
