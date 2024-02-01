@@ -23,7 +23,7 @@ function App() {
 
     async function getUser(token) {
         try {
-            const response = await axios.get(baseURL+'/api/users', { // baseURL+
+            const response = await axios.get('/api/users', { // baseURL+
                 headers: {
                     Authorization: token
                 }

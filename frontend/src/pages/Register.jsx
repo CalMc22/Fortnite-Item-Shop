@@ -23,7 +23,7 @@ function Register({ setUser }) {
         e.preventDefault()
         try {
 
-            const response = await axios.post(baseURL+'/auth/register', form) // baseURL+
+            const response = await axios.post('/auth/register', form) // baseURL+
             const token = response.data.token
 
             console.log(token)
@@ -35,7 +35,7 @@ function Register({ setUser }) {
 
             localStorage.setItem("token", token)
 
-            const userResponse = await axios.get(baseURL+'/api/users', {  // baseURL+
+            const userResponse = await axios.get('/api/users', {  // baseURL+
                 headers: {
                     Authorization: token
                 }
