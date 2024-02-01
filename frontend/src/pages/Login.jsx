@@ -52,7 +52,7 @@ function Login({ setUser }) {
 
     return ( 
         <>
-            <h1>Login</h1>
+            <h1 className='title'>LOGIN</h1>
             <form onSubmit={handleSubmit}>
                 <label htmlFor="username">Username:</label>
                 <br />

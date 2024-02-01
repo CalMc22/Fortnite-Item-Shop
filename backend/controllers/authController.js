@@ -4,7 +4,7 @@ const jwt = require('jsonwebtoken')
 
 function generateToken(newUser) {
     const payload = { id: newUser._id, username: newUser.username }
-    return jwt.sign(payload, process.env.JWT_SECRET, { expiresIn: 30 })
+    return jwt.sign(payload, process.env.JWT_SECRET, { expiresIn: 3600 }) //expires in 1 hour (3600secs)
 }
 
 async function register(req, res) {

@@ -1,12 +1,12 @@
 function Profile({ username, email }) {
     return ( 
-        <div>
-            <h1>Profile</h1>
+        <div className="profile">
+            <h1 className='title'>PROFILE</h1>
             <p>
-            Welcome, {username}!
+            Username: {username}
             <br />
             <br />
-            email: {email}
+            Email: {email}
             </p>
         </div>
         

@@ -9,12 +9,14 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Profile from "./pages/Profile";
 import Register from "./pages/Register";
+import Shop from './pages/Shop';
 
 import './App.css'
 
 
-function App() {
 
+function App() {
+    
     const [user, setUser] = useState({})
     const [isLoading, setIsLoading] = useState(true)
 
@@ -56,6 +58,7 @@ function App() {
                     <>
                         <Route path="/profile" element={<Profile username={user.username} email={user.email} />} />
                         {!isLoading && <Route path="*" element={<Navigate to="/" />} />}
+                        <Route path="/shop" element={<Shop/>} />
                     </>
                     :
                     <>

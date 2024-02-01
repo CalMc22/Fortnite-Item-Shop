@@ -53,7 +53,7 @@ function Register({ setUser }) {
 
     return ( 
         <>
-            <h1>Register</h1>
+            <h1 className='title'>REGISTER</h1>
             <form onSubmit={handleSubmit}>
                 <label htmlFor="username">Username:</label>
                 <br />
