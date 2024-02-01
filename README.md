@@ -31,7 +31,7 @@ You can use the link below to view the Fortnite Item Shop!
 
 ## Wireframe
 
-* Shop page
+* <a href="">Shop page</a>
 
 ![Alt text](<Screenshot 2024-02-01 100025.png>)
 
