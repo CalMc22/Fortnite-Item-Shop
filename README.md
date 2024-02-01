@@ -25,6 +25,20 @@ You can use the link below to view the Fortnite Item Shop!
 
 * Gaps between some Lego Cosmetics
 
-## Production
+## Tello Board
 
 * https://trello.com/b/KL6AiwBu/mode-3-project
+
+## Wireframe
+
+* Shop page
+
+![Alt text](<Screenshot 2024-02-01 100025.png>)
+
+* Profile page
+
+![Alt text](<Screenshot 2024-02-01 100612.png>)
+
+* Log in/Register page
+
+![Alt text](<Screenshot 2024-02-01 100526.png>)
