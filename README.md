@@ -7,10 +7,7 @@ An application that shows all the current cosmetics in the Fortnite Item Shop!
 
 You can use the link below to view the Fortnite Item Shop!
 
-* Deployed Links currently don't work but it will work with Vite
-
-* Frontend: https://fortnite-item-shop.onrender.com/
-* Backend: https://fn-item-shop.onrender.com/
+* Link: https://fortnite-item-shop.onrender.com/
 
 ## Assets
 
