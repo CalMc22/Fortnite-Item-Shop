@@ -15,27 +15,13 @@ You can use the link below to view the Fortnite Item Shop!
 
 ## Future Ideas
 
-* Add more shop tabs showing Bundles, Music, and Rocket Racing Vehicles
+* Add more shop tabs showing Bundles, Music, LEGO Styles and Rocket Racing Vehicles
 * Show description and price of item when clicked
 
 ## Known Bugs
 
-* Gaps between some Lego Cosmetics
+N/A
 
 ## Tello Board
 
 * https://trello.com/b/KL6AiwBu/mode-3-project
-
-## Wireframe
-
-* <a href="">Shop page</a>
-
-![Alt text](<Screenshot 2024-02-01 100025.png>)
-
-* Profile page
-
-![Alt text](<Screenshot 2024-02-01 100612.png>)
-
-* Log in/Register page
-
-![Alt text](<Screenshot 2024-02-01 100526.png>)
