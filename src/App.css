@@ -1,0 +1,140 @@
+body {
+  margin: 0;
+  background: skyblue;
+  color: black;
+}
+
+.icon {
+  height: 100px;
+  /* padding-left: 100px;
+  padding-right: 100px; */
+}
+
+.navbarwelcome {
+  font-size: 30px;
+
+}
+
+.navBar {
+  border: 5px solid black;
+  border-top: 20px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  filter: drop-shadow(2px 5px 15px);
+  background: rgb(0, 73, 73);
+  background: linear-gradient(180deg, rgb(0, 190, 190) 0%, rgb(214, 214, 214) 95%);
+  margin: 0px;
+  padding: 1px;
+}
+
+ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style: none;
+  font-size: 20px;
+  height: 50px;
+}
+
+form {
+  text-align: center;
+}
+
+p {
+  font-size: 40px;
+  border: 5px solid black;
+  background: rgb(0, 73, 73);
+  background: linear-gradient(180deg, rgb(0, 190, 190) 0%, rgb(214, 214, 214) 95%);
+  filter: drop-shadow(2px 5px 15px);
+  display: flex;
+  justify-content: center;
+  border-radius: 50px;
+  margin: 100px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+h1 {
+  text-align: center;
+}
+
+/* .profile {
+    border: 5px solid black;
+    border-radius: 20px;
+    margin-top:100px;
+      filter: drop-shadow(2px 5px 15px);
+      background: rgb(0,73,73);
+      background: linear-gradient(180deg, rgb(0, 190, 190) 0%, rgb(214, 214, 214) 95%);
+      margin: 0px;
+      padding: 1px;
+    } */
+
+.home {
+  margin-top: 100px;
+  line-height: 1;
+  font-size: 50px;
+  text-align: center;
+}
+
+.loading {
+  line-height: 1;
+  font-size: 100px;
+  text-align: center;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
+}
+
+.container {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1;
+  text-align: center;
+
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+.title {
+  font-size: 40px;
+  border: 5px solid black;
+  background: rgb(0, 73, 73);
+  background: linear-gradient(180deg, rgb(0, 190, 190) 0%, rgb(214, 214, 214) 95%);
+  filter: drop-shadow(2px 5px 15px);
+  display: flex;
+  justify-content: center;
+  border-radius: 50px;
+  margin: 100px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.vbuckIcon {
+  height: 40px;
+}
+
+.shopTab {
+  font-size: 30px;
+  border-radius: 20px;
+  border: 3px solid black;
+  filter: drop-shadow(5px 5px 5px);
+  background: rgb(0, 73, 73);
+  background: linear-gradient(180deg, rgb(0, 190, 190) 0%, rgb(214, 214, 214) 95%);
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.shopEntry {
+  height: 200px;
+  /* border: 3px solid black; */
+  border-radius: 20px;
+  filter: drop-shadow(5px 5px 5px);
+  background: rgb(0, 73, 73);
+  background: linear-gradient(180deg, rgb(0, 190, 190) 0%, rgb(214, 214, 214) 95%);
+  margin: 10px;
+}
